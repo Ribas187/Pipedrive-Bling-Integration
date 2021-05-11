@@ -1,0 +1,44 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {"SwitchCase":  1}
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {"avoidEscape": true}
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
+  }
+}
