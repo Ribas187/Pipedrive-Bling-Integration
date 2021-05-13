@@ -1,23 +1,8 @@
-import { blingApi, pipedriveApi } from '../apis';
 import { j2xParser as Parser } from 'fast-xml-parser';
+import { blingApi, pipedriveApi } from '../apis';
 import sleep from '../util/sleep';
-
-interface IProduto {
-  item: {
-    codigo: string;
-    qtde: number;
-  };
-}
-
-interface IDeal {
-  data: Date;
-  cliente: {
-    nome?: string;
-    email?: string;
-    fone?: string;
-  };
-  itens: IProduto[];
-}
+import { IDeal } from '../models/deals/interfaces';
+import { IProduto } from '../models/produto/interfaces';
 
 interface IResponse {
   deals: IDeal[];

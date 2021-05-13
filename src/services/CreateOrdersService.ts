@@ -1,23 +1,7 @@
 import { blingApi } from '../apis';
 import { j2xParser as Parser } from 'fast-xml-parser';
 import sleep from '../util/sleep';
-
-interface IProduto {
-  item: {
-    codigo: string;
-    qtde: number;
-  };
-}
-
-interface IDeal {
-  data: Date;
-  cliente: {
-    nome?: string;
-    email?: string;
-    fone?: string;
-  };
-  itens: IProduto[];
-}
+import { IDeal } from '../models/deals/interfaces';
 
 interface IResponse {
   deal: IDeal;
